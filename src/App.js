@@ -31,16 +31,14 @@ function App() {
   const [subfontsize, setSubfontsize] = useState("100%");
   const [contfontsize, setContfontsize] = useState("100%");
   const menuSizeValue = "130%"; 
-  //mobile menu toggler
+  //mobile menu wraper
   const [toggle, setToggle] = useState(false)
   const [visibility, setVisibility] = useState("hidden")
   
   //mobile menu wraper funkce    
   const wraperFun = () => {
-      console.log("wraper funguje");
       setToggle(!toggle);
   }
-  
   useEffect(() => {
     if(toggle === true){
       setVisibility("visible");
@@ -67,7 +65,6 @@ function App() {
 
   //funkce pro menu HOMEPAGE
   const homeFun = () => {
-    console.log("homeFun funguje");
     //page visibility
     setHomepage(0);
     setReleases(-1);
@@ -100,7 +97,6 @@ function App() {
 
   //funkce pro RELEASES
   const releasesFun = () => {
-    console.log("releaseFun funguje");
     //page visibility
     setReleases(1);
     setHomepage(-1);
@@ -133,7 +129,6 @@ function App() {
 
   //funkce pro SUBMIT
   const submitFun = () => {
-    console.log("submitFun funguje");
     //page visibility
     setSubmit(0);
     setReleases(-1);
@@ -162,7 +157,6 @@ function App() {
 
   //funkce pro CONTACT
   const contactFun = () => {
-    console.log("contactFun funguje");
     //page visibility    
     setContact(0);
     setSubmit(-1);
@@ -227,7 +221,6 @@ function App() {
 
   //funkce pro thanks demo show
   const thanksDemoShow = () => {
-    console.log("thanks demo show funguje")
     //page visibility  
     setThanksDemo(0);
     setSubmitDemo(-1);
@@ -252,19 +245,14 @@ function App() {
       contfontsize={contfontsize}
       wraper={wraperFun}
       visibility={visibility}
-
       />
       <MainContent visibility={homepage} opacity={homePageOpacity} transition={pagesTransition}/>
       <Releases visibility={releases} opacity={releasesPageOpacity} transition={pagesTransition}/>
       <Submitpage visibility={submit} opacity={submitPageOpacity} transition={pagesTransition} demoPage={demoPage} playlistPage={playlistPage}/>
       <Playlistsubmit visibility={playlistSubmit} opacity={playlistSubmitOpacity} transition={pagesTransition} thanksDemoShow={thanksDemoShow}/>
-
       <Submit visibility={submitDemo} opacity={submitDemoOpacity} transition={pagesTransition} thanksDemoShow={thanksDemoShow}/>
-
       <Contact visibility={contact} opacity={contactPageOpacity} transition={pagesTransition}/>
-
       <Thanksdemo visibility={thanksDemo} opacity={thanksDemoOpacity} transition={pagesTransition} submitFun={submitFun} homeFun={homeFun}/>
-
       <div style={{ 
         marginTop: playlistMargin,
         transition: "2s"
