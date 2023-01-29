@@ -1,0 +1,59 @@
+.btnStyle {
+    background-color: rgb(241, 239, 235);
+    padding: 5px 15px;
+    margin-top: auto;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.submissionTable {
+    display: flex;
+    flex-direction: column;
+    Width: 90%;
+    align-items: center;
+}
+
+@media (min-width: 1050px) {
+    .submissionTable {
+        width: 1000px;
+        flex-direction: row;
+    }
+}
+
+.submissionPage {
+    position: absolute;
+    translate: 0px 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+@media (min-width: 1050px) {
+    .submissionPage {
+        translate: 0px 180px;
+        margin-top: 0px;
+    }
+}
+
+.table {
+    margin: 10px;
+    margin-top: 0px;
+    background: white;
+    width: 300px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.637);
+}
+@media (min-width: 1050px) {
+    .table {
+        margin-top: 60px;
+        margin: 30px;
+        width: 400px;
+        height: 180px;
+    }
+}
