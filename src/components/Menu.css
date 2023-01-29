@@ -51,6 +51,7 @@ button {
     font-weight: bold;
     border: none;
     background: none;
+    color: black;
 }
 
 .btn {
@@ -61,6 +62,7 @@ button {
     width: fit-content;
     visibility: hidden;
     transition: 0;
+    color: black;
 }
 @media (min-width: 1050px) {
     .btn {

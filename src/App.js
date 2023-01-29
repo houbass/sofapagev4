@@ -119,7 +119,7 @@ function App() {
     setContfontsize("100%");
     //playlist position
     if(onlyWidth <= 1050) {
-      setPlaylistMargin("2750px");      
+      setPlaylistMargin("2670px");      
     }else{
       setPlaylistMargin("1200px");       
     }
@@ -195,7 +195,7 @@ function App() {
     setThanksDemoOpacity(0);
     //playlist position
     if(onlyWidth <= 1050) {
-      setPlaylistMargin("1380px");      
+      setPlaylistMargin("1280px");      
     }else{
       setPlaylistMargin("1120px");       
     }
@@ -213,7 +213,7 @@ function App() {
     setThanksDemoOpacity(0);
     //playlist position
     if(onlyWidth <= 1050) {
-      setPlaylistMargin("1380px");      
+      setPlaylistMargin("1230px");      
     }else{
       setPlaylistMargin("1120px");       
     }
@@ -233,8 +233,26 @@ function App() {
     setPlaylistMargin("700px");
   }
 
+  //onLoad funkce
+  const [helo, setHelo] = useState("");
+  const [opacityText, setOpacityText] = useState("0");
+  const onLoadFun = () => {
+    console.log("ONLOAD FUNGUJE MORE");
+    setHelo("heloooo");
+    setTimeout(() => {
+      setHelo("heloooo madafaka");  
+    }, 2000)
+
+
+
+
+    setOpacityText("1");
+
+  }
+
+
   return (
-    <div className="App">
+    <div onLoad={onLoadFun} className="App" >
       <Menu 
       homeClick={homeFun} 
       releasesClick={releasesFun} 
@@ -246,6 +264,7 @@ function App() {
       wraper={wraperFun}
       visibility={visibility}
       />
+      <h1 style={{transition: "6s", opacity: opacityText}}>{helo}</h1>
       <MainContent visibility={homepage} opacity={homePageOpacity} transition={pagesTransition}/>
       <Releases visibility={releases} opacity={releasesPageOpacity} transition={pagesTransition}/>
       <Submitpage visibility={submit} opacity={submitPageOpacity} transition={pagesTransition} demoPage={demoPage} playlistPage={playlistPage}/>
